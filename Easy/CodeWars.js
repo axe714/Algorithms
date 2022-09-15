@@ -1,4 +1,4 @@
-// Grade book
+// GRADE BOOK:
 
 // Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
 
@@ -38,6 +38,7 @@ function getGrade(s1, s2, s3) {
 
 
 
+// REVERSED WORDS:
 
 // Complete the solution so that it reverses all of the words within the string passed in.
 
@@ -61,6 +62,7 @@ function reverseWords(str) {
 
 
 
+// SCHOOL PAPERWORK #1:
 
 //   Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
 
@@ -89,7 +91,7 @@ function paperwork(n, m) {
 
 
 
-
+// REDUCE BUT GROW:
 
 // Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
 
@@ -134,3 +136,51 @@ function checkForFactor (base, factor) {
 function checkForFactor (base, factor) {
     return base % factor === 0;
   }
+
+
+
+
+// CHECK FOR CELSIUS:
+
+// Debug celsius converter
+// Your friend is traveling abroad to the United States so he wrote a program to convert fahrenheit to celsius. Unfortunately his code has some bugs.
+
+// Find the errors in the code to get the celsius converter working properly.
+
+// To convert fahrenheit to celsius:
+
+// celsius = (fahrenheit - 32) * (5/9)
+// Remember that typically temperatures in the current weather conditions are given in whole numbers.
+//  It is possible for temperature sensors to report temperatures with a higher accuracy such as to the nearest tenth.
+//  Instrument error though makes this sort of accuracy unreliable for many types of temperature measuring sensors.
+
+
+// MY ANSWER
+
+  function convertToCelsius (temperature) {
+    let celsius = (temperature - 32) * (5/9)
+    return celsius
+  }
+  
+  function weatherInfo (temp) {
+    let c = convertToCelsius(temp)
+    if (c > 0)
+      return (c + " is above freezing temperature")
+    else
+    return (c + " is freezing temperature")
+  }
+
+// TOP ANSWER
+
+function weatherInfo (temp) {
+  var c = convertToCelsius(temp);
+  if (c <= 0)
+    return (c + " is freezing temperature");
+  else
+    return (c + " is above freezing temperature");
+}
+
+function convertToCelsius (temperature) {
+  var celsius = (temperature - 32) * (5/9);
+  return celsius;
+}
