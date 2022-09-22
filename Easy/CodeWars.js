@@ -184,3 +184,15 @@ function convertToCelsius (temperature) {
   var celsius = (temperature - 32) * (5/9);
   return celsius;
 }
+
+
+
+// Remove String Spaces
+
+// MY ANSWER
+const noSpace = (x) => x.split(' ').join('')
+
+// TOP ANSWER
+function noSpace(x){
+  return x.replace(/\s/g, '');
+}
