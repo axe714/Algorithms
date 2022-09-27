@@ -37,3 +37,61 @@ var twoSum = function(nums, target) {
         }
     }
 };
+
+
+// VALID PARENTHESES:
+
+// Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+// An input string is valid if:
+
+// Open brackets must be closed by the same type of brackets.
+// Open brackets must be closed in the correct order.
+// Every close bracket has a corresponding open bracket of the same type.
+ 
+
+// Example 1:
+
+// Input: s = "()"
+// Output: true
+// Example 2:
+
+// Input: s = "()[]{}"
+// Output: true
+// Example 3:
+
+// Input: s = "(]"
+// Output: false
+ 
+
+// Constraints:
+
+// 1 <= s.length <= 104
+// s consists of parentheses only '()[]{}'.
+
+
+// MY ANSWER
+
+const isValid = (input) => {
+    // // Initialise an array to store the closing brackets expected
+    let validString = [];
+    
+    // Looping through the characters in the string
+    for (let i = 0; i < input.length; i++) {
+        // Push the closing equivelant of any open brackets found
+        if (input[i] == '(') {
+            validString.push(')');
+        } else if (input[i] == '{') {
+            validString.push('}')
+        } else if (input[i] == '[') {
+            validString.push(']')
+        } 
+        
+        // If a close bracket is found, check that it matches the last stored open bracket
+        else if (validString.pop() !== input[i]) {
+            return false
+        }
+        
+        return true
+    }
+}
